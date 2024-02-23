@@ -1,0 +1,80 @@
+.contenedor {
+  background: url(../img/Escenario.png);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.fondomover {
+  animation: moverfondo 1s infinite linear;
+}
+/*  height: 40rem;  */
+@keyframes moverfondo {
+  100% {
+    background-position-x: -1024px;
+  }
+}
+
+.ruedas {
+  position: absolute;
+  z-index: 1;
+  top: 600px;
+  left: 600px;
+}
+.ruedasmover {
+  animation: ruedas 1s infinite linear;
+}
+.ruedas2 {
+  position: absolute;
+  z-index: 1;
+  top: 600px;
+  right: 500px;
+}
+.ruedasmover2 {
+  animation: ruedas 1s infinite linear;
+}
+
+@keyframes ruedas {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.luz {
+  position: absolute;
+  z-index: 1;
+  top: 256px;
+  right: 4px;
+}
+.luzmover {
+  animation: luz 1s infinite linear;
+}
+@keyframes luz {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.humo {
+  width: 251.4px;
+  height: 137px;
+  background: url("../img/humo.png");
+  position: absolute;
+  z-index: 1;
+  top: 600px;
+  left: 115px;
+}
+.humomover {
+  animation: humo 2s infinite steps(5);
+}
+@keyframes humo {
+  100% {
+    background-position-x: 1257px;
+  }
+}
+.oculto {
+  display: none;
+}
